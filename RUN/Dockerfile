@@ -1,3 +1,2 @@
 FROM almalinux:9.6-minimal-20250520
-RUN dnf install dnf -y
-RUN dnf install nginx -y
+RUN microdnf install -y dnf && dnf install -y nginx
