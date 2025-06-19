@@ -69,3 +69,15 @@ then
 else
     echo "Docker is installed and running successfully."
 fi
+systemctl restart deamon
+if [ $? -ne 0 ]
+then
+    echo "Failed to restart daemon, please check the logs."
+    exit 1
+else
+    echo "Daemon restarted successfully."
+fi
+echo "Docker installation and configuration completed successfully."
+echo "You can now use Docker commands without sudo."
+echo "Please log out and log back in to apply the group changes."
+echo "Thank you for using this script." 
